@@ -1,0 +1,302 @@
+﻿<!doctype html>
+<html lang="">
+<head>
+    <meta charset="utf-8" />
+    <title>אינפוגרפיקה אינטראקטיבית עבור פרויקט גמר - zoomIN</title>
+    <meta name="description" content="העברת מידע אודות פרויקט הגמר - zoomIN" />
+    <meta name="keywords" content="zoomIN, פרויקט גמר, תכנות 3, HIT, טכנולוגיות למידה" />
+    <meta name="author" content="Yuval Pinhas, Maayan Hadad" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+    <!-- CSS -->
+    <link href="bootstrap/css/bootstrap-reboot.css" rel="stylesheet" />
+    <link href="bootstrap/css/bootstrap-grid.css" rel="stylesheet" />
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
+
+    <link href="styles/myStyle.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="JS/JavaScript.js"></script>
+
+</head>
+<body>
+    <div id="container" class="container d-flex flex-column">
+        <div id="logoBar" class="p-0">
+            <div id="welcome" class="logoImg cursorPointing" onclick="clickIcon(this.id);"></div>
+        </div>
+
+        <nav>
+            <ul class="nav row justify-content-around">
+                <li id="explanation" class="icons explanationIcon cursorPointing" data-toggle="tooltip" data-placement="top" title="למה זה חשוב?" onclick="clickIcon(this.id);">
+                </li>
+                <li id="learn" class="icons learnIcon cursorPointing" data-toggle="tooltip" data-placement="top" title="מה לומדים?" onclick="clickIcon(this.id);">
+                </li>
+                <li id="what" class="icons whatIcon cursorPointing" data-toggle="tooltip" data-placement="top" title="מה זה zoomIN?" onclick="clickIcon(this.id);">
+                </li>
+                <li id="people" class="icons peopleIcon cursorPointing" data-toggle="tooltip" data-placement="top" title="מי אנחנו?" onclick="clickIcon(this.id);">
+                </li>
+                <li id="adjust" class="icons adjustIcon cursorPointing" data-toggle="tooltip" data-placement="top" title="איך נעשתה התאמה?" onclick="clickIcon(this.id);">
+                </li>
+            </ul>
+        </nav>
+
+        <div id="welcomeDiv" class="wrapContent d-flex flex-column flex-md-row align-items-center justify-content-center">
+            <figure class="col-12 col-md-6">
+                <img id="welcomeZooma" class="zoomWindow" src="images/zoomWindow/welcome.JPG" alt="גברת זומה מברכת לשלום" />
+            </figure>
+            <div id="text" class="col-12 col-md-6">
+                <div>
+                    <section>
+                        <h1>
+                            ברוכים הבאים!
+                        </h1>
+
+                        <p>
+                            <b>לחצו</b> על הכפתורים מטה בכדי לקבל מידע אודות zoomIN
+                        </p>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <div id="whatDiv" class="displayNone">
+
+            <section>
+                <div id="whatUperContent" class="d-md-flex">
+                    <div>
+                        <h2>
+                            מה זה zoomIN?
+                        </h2>
+                        <div>
+                            <p>
+                                zoom-IN
+                                זוהי לומדה ייחודית וראשונה מסוגה שמטרתה ללמד אנשים בוגרים בעלי מוגבלות שכלית התפתחותית (מש"ה) כיצד להשתמש ב-ZOOM באופן עצמאי.
+                                <br />
+                                חווית הלמידה מבוססת על מתודות למידה המותאמות במיוחד עבור אנשים בעלי מש"ה.
+                            </p>
+                            <p>
+                                <b class="instructions">
+                                    לחצו על הפלוסים כדי לגלות כיצד נעשתה התאמה.
+                                </b>
+                            </p>
+                        </div>
+                    </div>
+
+                    <figure class="col-12 col-md-6">
+                        <img id="whatZooma" class="zoomWindow" src="images/zoomWindow/pointing.JPG" alt="גברת זומה מורה ללחוץ על הפלוסים" />
+                    </figure>
+                </div>
+                <ul class="d-md-flex justify-content-md-around">
+                    <div class="plusIconWraper">
+                        <span id="plusIcon1" class="plusIcon plusIconBG btn" data-toggle="collapse" data-target="#plus1" onclick="clickPlusIcon(this.id);"></span>
+                        <li id="plus1" class="collapse">
+                            סרטוני הדרכה קצרים
+                        </li>
+                    </div>
+                    <div class="plusIconWraper">
+                        <span id="plusIcon2" class="plusIcon plusIconBG btn" data-toggle="collapse" data-target="#plus2" onclick="clickPlusIcon(this.id);"></span>
+                        <li id="plus2" class="collapse">
+                            הנחיות מדויקות לפעולה
+                        </li>
+                    </div>
+                    <div class="plusIconWraper">
+                        <span id="plusIcon3" class="plusIcon plusIconBG btn" data-toggle="collapse" data-target="#plus3" onclick="clickPlusIcon(this.id);"></span>
+                        <li id="plus3" class="collapse">
+                            סימולציות לתרגול
+                        </li>
+                    </div>
+                    <div class="plusIconWraper">
+                        <span id="plusIcon4" class="plusIcon plusIconBG btn" data-toggle="collapse" data-target="#plus4" onclick="clickPlusIcon(this.id);"></span>
+                        <li id="plus4" class="collapse">
+                            פידבקים חזקים
+                        </li>
+                    </div>
+                </ul>
+
+            </section>
+
+
+        </div>
+
+        <div id="learnDiv" class="displayNone">
+            <div class="d-flex flex-row align-items-start justify-content-between">
+                <div>
+                    <h2>
+                        מה נלמד בעזרת zoomIN?
+                    </h2>
+                    <div>
+                        <p>
+                            גברת זומה תלווה ותדריך את הלומדים לאורך כל שלושת החלקי הלומדה. 
+                        </p>
+                        <p>
+                            <b class="instructions">
+
+                                לחצו על הנקודות כדי לחשוף את החלקים.
+                            </b>
+                        </p>
+                    </div>
+                </div>
+                <figure class="col-6">
+                    <img id="learnZooma" src="images/teaching-looking-down.JPG" alt="גברת זומה מסבירה מה התוכן הנלמד" />
+                </figure>
+            </div>
+            <div class="timelineContainer">
+                <ul id="timelineList" class="timeline">
+                    <li class="timelineCircle" data-toggle="collapse" data-target="#timeline1" onclick="clickTimeline(this);">
+                        <div id="timeline1" class="timelineLiContent collapse">
+                            <b class="instructions">
+                                כיצד לפתור בעיות בזום?
+                            </b>
+                            <br />
+                            מתן עזרה בהתמודדות עם תקלות נפוצות בזמן אמת
+                        </div>
+                    </li>
+                    <li class="timelineCircle" data-toggle="collapse" data-target="#timeline2" onclick="clickTimeline(this);">
+                        <div id="timeline2" class="timelineLiContent collapse">
+                            <b class="instructions">
+                                כיצד להשתמש בזום?
+                            </b>
+                            <br />
+                            הדרכה ותרגול בכניסה לשיחה, במהלך השיחה ובסיום השיחה
+                        </div>
+                    </li>
+                    <li class="timelineCircle" data-toggle="collapse" data-target="#timeline3" onclick="clickTimeline(this);">
+                        <div id="timeline3" class="timelineLiContent collapse">
+                            <b class="instructions">
+                                כיצד להתכונן למפגש בזום?
+                            </b>
+                            <br />
+                            הכנה רגשית וטכנית לקראת השימוש בזום
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+
+        <div id="adjustDiv" class="wrapContent d-flex flex-column flex-md-row align-items-center justify-content-between displayNone">
+            <div>
+                <h2>
+                    איך zoomIN  מותאם לאנשים בעלי מש"ה?
+                </h2>
+                <p>
+                    zoomIN  תוכנן ופותח מתוך המחשבה על כל הקשיים איתם מתמודדים אנשים בעלי מש"ה במפגש עם טכנולוגיה.
+                </p>
+                <p>
+                    <b>
+                        המטרה היא ליצור ממשק מותאם ידידותי ונגיש במיוחד עבורם!
+                    </b>
+                </p>
+                <p>
+                    <b class="instructions">
+                        לחצו על המספרים בכדי לגלות פרטים נוספים.
+                    </b>
+                </p>
+            </div>
+            <div>
+                <ul id="adjustList">
+                    <div class="d-flex flex-row-reverse justify-content-between">
+                        <li class="clickbleNunbers cursorPointing" onclick="clickNumbers(this);">
+                            1
+                        </li>
+                        <li class="clickbleNunbers cursorPointing" onclick="clickNumbers(this);">
+                            2
+                        </li>
+                        <li class="clickbleNunbers cursorPointing" onclick="clickNumbers(this);">
+                            3
+                        </li>
+                        <li class="clickbleNunbers cursorPointing" onclick="clickNumbers(this);">
+                            4
+                        </li>
+                    </div>
+                    <div class="d-flex flex-row-reverse justify-content-between">
+                        <li class="clickbleNunbers cursorPointing" onclick="clickNumbers(this);">
+                            5
+                        </li>
+                        <li class="clickbleNunbers cursorPointing" onclick="clickNumbers(this);">
+                            6
+                        </li>
+                        <li class="clickbleNunbers cursorPointing" onclick="clickNumbers(this);">
+                            7
+                        </li>
+                        <li class="clickbleNunbers cursorPointing" onclick="clickNumbers(this);">
+                            8
+                        </li>
+                    </div>
+                </ul>
+                <label id="adjustOutput"></label>
+            </div>
+        </div>
+
+        <div id="explanationDiv" class="wrapContent d-flex flex-column flex-md-row align-items-center justify-content-between displayNone">
+
+            <div>
+                <h2>
+                    למה zoomIN חשוב לאנשים בעלי מש"ה?
+                </h2>
+                <ul>
+                    <li>
+                        שמירה על סדר היום והשגרה של אנשים בעלי מש"ה.
+                    </li>
+                    <li>
+                        שוויון הזדמנויות לתקשורת כמו כולם.
+                    </li>
+                    <li>
+                        חיזוק העצמאות והגברת תחושת הביטחון והמסוגלות.
+                    </li>
+                    <li>
+                        קיום שיחות פרטיות ללא אדם מתווך הנמצא בחדר.
+                    </li>
+                    <li>
+                        קיום של  מפגשים / טיפולים מרחוק. 
+                    </li>
+                </ul>
+            </div>
+            <figure class="col-12 col-md-6">
+                <img id="explanationZooma" src="images/happy.JPG" alt="גברת זומה מסבירה" />
+            </figure>
+        </div>
+
+        <div id="peopleDiv" class="wrapContent d-flex flex-column flex-md-row align-items-center justify-content-between displayNone">
+            <div class="wrapPeopleContant">
+                <h2>
+                    מי עומד מאחורי zoomIN?
+                </h2>
+                <p>
+                    הפרויקט נוצר במסגרת קורס פרויקטי הגמר של המסלול לטכנולוגיות למידה במכון הטכנולוגי חולון,
+                    <br />
+                    בהנחיית פרופ' רבקה שאומן ודמני וד"ר דן כהן וקס, 
+                    בשיתוף עם המכון הישראלי להנגשה קוגניטיבית.
+                </p>
+            </div>
+            <div class="col-12 col-md-6">
+                <div id="maayanYuvalImgWrap" class="d-flex flex-column flex-md-row">
+                    <figure>
+                        <img class="zoomWindow maayanYuvalImg" src="images/zoomWindow/maayan.png" alt="מעיין חדד, סטודנטית לתואר ראשון בטכנולוגיות למידה" />
+                    </figure>
+                    <figure>
+                        <img class="zoomWindow maayanYuvalImg" src="images/zoomWindow/yuval.png" alt="יובל פנחס, סטודנטית לתואר ראשון בטכנולוגיות למידה" />
+                    </figure>
+                </div>
+                <p>
+                    <b class="instructions">
+                        "אנו שמחות ונרגשות על ההזדמנות שניתנה לנו לקדם עוד צעד לעבר שוויון חברתי וטכנולוגי בקרב אנשים בעלי מוגבלות שכלית התפתחותית".
+                    </b>
+                </p>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+</html>

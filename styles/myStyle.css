@@ -1,0 +1,773 @@
+#container {
+    min-height: 100vh;
+}
+
+body {
+    direction: rtl;
+    background-color: #1A1B26;
+    color: white;
+}
+
+#container {
+    max-width: 100%;
+    padding: 0;
+}
+
+/*LOGO BAR*/
+
+#logoBar {
+    background-color: #41BDB1;
+    text-align: center;
+    border-radius: 0 0 50% 50%;
+    z-index: 10;
+}
+
+.logoImg {
+    background-image: url('../images/zoomIN logo.svg');
+    width: 8em;
+    height: 4em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+}
+
+/*מגודל 576 ומעלה*/
+@media (min-width: 576px) {
+    .logoImg {
+        width: 11em;
+        height: 6em;
+    }
+}
+
+/*NAV*/
+
+nav {
+    position: fixed !important;
+    background-color: #222327;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    z-index: 10;
+}
+
+
+/*icons*/
+/*מגודל 0 ועד 576*/
+.icons {
+    width: 2em;
+    height: 2em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 10px;
+}
+
+/*מגודל 576 ומעלה*/
+@media (min-width: 576px) {
+    .icons {
+        width: 3em;
+        height: 3em;
+    }
+}
+
+
+.explanationIcon {
+    background-image: url('../images/icons/explanation.png');
+}
+
+.explanationIcon_a {
+    background-image: url('../images/icons/explanation_a.png');
+}
+
+.learnIcon {
+    background-image: url('../images/icons/learn.png');
+}
+
+.learnIcon_a {
+    background-image: url('../images/icons/learn_a.png');
+}
+
+.whatIcon {
+    background-image: url('../images/icons/what.png');
+}
+
+.whatIcon_a {
+    background-image: url('../images/icons/what_a.png');
+}
+
+.peopleIcon {
+    background-image: url('../images/icons/people.png');
+}
+
+.peopleIcon_a {
+    background-image: url('../images/icons/people_a.png');
+}
+
+.adjustIcon {
+    background-image: url('../images/icons/adjust.png');
+}
+
+.adjustIcon_a {
+    background-image: url('../images/icons/adjust_a.png');
+}
+
+/*tooltip*/
+.tooltip-inner {
+    background-color: #F05E29;
+    font-size: 1.5rem;
+}
+
+.arrow::before {
+    border-top-color: #F05E29 !important;
+}
+
+.tooltip {
+    display: none;
+}
+/*מגודל 576 ומעלה*/
+@media (min-width: 576px) {
+    .tooltip {
+        position: absolute;
+        z-index: 1070;
+        display: block;
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: right;
+        text-align: start;
+        text-decoration: none;
+        text-shadow: none;
+        text-transform: none;
+        letter-spacing: normal;
+        word-break: normal;
+        word-spacing: normal;
+        white-space: normal;
+        line-break: auto;
+        font-size: 0.875rem;
+        word-wrap: break-word;
+        opacity: 0;
+    }
+}
+
+/*IMG*/
+.zoomWindow {
+    border: 5px solid #92D050;
+    margin: 0 auto;
+    display: block;
+}
+
+#welcomeZooma {
+    width: 75%;
+}
+
+#whatZooma {
+    width: 50%;
+}
+
+
+
+
+/*WelcomePage*/
+
+#welcomeDiv figure {
+    transform: translate3d(100%,0,0);
+    animation: slideInRight;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+#welcomeDiv div h1 {
+    animation-timing-function: cubic-bezier(.215,.61,.355,1);
+    animation: bounce;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+#welcomeDiv div p {
+    opacity: 0;
+    animation: fadeIn;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+
+.wrapContent {
+    flex: 1;
+    padding-bottom: 124px;
+}
+
+    .wrapContent div div {
+        margin: 0 auto;
+        width: 75%;
+    }
+
+        .wrapContent div div h1 {
+            font-size: 2.5rem;
+        }
+
+        .wrapContent div div section p {
+            font-size: 1rem;
+        }
+
+/*מגודל 576 ומעלה*/
+@media (min-width: 576px) {
+    .wrapContent div div h1 {
+        font-size: 5rem;
+    }
+
+    .wrapContent div div section p {
+        font-size: 1.4rem;
+    }
+}
+
+.displayNone {
+    display: none !important;
+}
+
+/*GENERAL CSS*/
+.instructions {
+    color: #F05E29;
+}
+
+
+.cursorPointing:hover {
+    cursor: pointer;
+}
+
+#whatDiv section ul {
+    padding: 0 0 124px 0;
+}
+
+h2 {
+    animation: slideInDown;
+    animation-duration: 2s;
+    animation-delay: -0.3s;
+    animation-fill-mode: forwards;
+}
+
+p {
+    font-size: 1rem;
+    padding-top: 3%;
+}
+
+@media (min-width: 576px) {
+
+    h2 {
+        animation: bounceInRight;
+        animation-duration: 2s;
+        animation-delay: -0.3s;
+        animation-fill-mode: forwards;
+    }
+
+    p {
+        font-size: 1.3rem;
+        padding-top: 3%;
+    }
+}
+
+/*WHAT PAGE*/
+h2 {
+    width: 100%;
+    padding-top: 70px;
+    padding-bottom: 10px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    top: 0;
+    position: absolute;
+    background-color: #F05E29;
+    font-size: 2rem;
+    text-align: center;
+    z-index: 1;
+}
+
+/*מגודל 576 ומעלה*/
+@media (min-width: 576px) {
+    h2 {
+        font-size: 3rem;
+        padding: 10px 10px 10px 15px;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        width: fit-content;
+        text-align: center;
+        position: static;
+    }
+}
+
+.plusIconWraper {
+    width: 100%;
+    text-align: center;
+}
+
+.plusIcon {
+    width: 3em;
+    height: 3em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 10px;
+}
+
+.plusIconBG {
+    background-image: url('../images/clickble/plus.png');
+}
+
+.plusIconBG_a {
+    background-image: url('../images/clickble/plus_a.png');
+}
+
+
+#whatUperContent {
+    margin: 5% 0 3% 0;
+}
+
+    #whatUperContent div div {
+        margin: 15% 5% 0% 5%;
+    }
+
+/*מגודל 576 ומעלה*/
+@media (min-width: 576px) {
+
+    #whatUperContent div div {
+        margin: 0 5% 0% 0%;
+    }
+}
+
+#myCollapsible:before {
+    display: none !important;
+}
+
+/*what animation*/
+#whatUperContent div div p {
+    opacity: 0;
+    animation: fadeIn;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+#whatZooma {
+    opacity: 0;
+    animation: fadeIn;
+    animation-duration: 2s;
+    animation-delay: 2.5s;
+    animation-fill-mode: forwards;
+}
+
+#whatDiv section ul {
+    transform: translate3d(100%,0,0);
+    animation: slideInRight;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+@media (min-width: 576px) {
+
+    #whatUperContent div div {
+        opacity: 0;
+        animation: fadeIn;
+        animation-duration: 2s;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+    }
+
+    #whatUperContent figure {
+        transform: translate3d(-100%,0,0);
+        animation: slideInLeft;
+        animation-duration: 2s;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+    }
+
+    #whatDiv section ul {
+        font-size: 1.5rem;
+        margin-top: -2%;
+        transform: translate3d(100%,0,0);
+        animation: slideInRight;
+        animation-duration: 2s;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+    }
+}
+/*LEARN PAGE*/
+
+#learnDiv div:first-child div div {
+    margin-right: 5%;
+}
+
+#learnDiv > div {
+    margin-top: 20%;
+}
+
+
+#learnZooma {
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+    position: absolute;
+    left: 0;
+}
+
+/*מגודל 576 ומעלה*/
+@media (min-width: 576px) {
+
+    #learnZooma {
+        width: 50%;
+    }
+
+    #learnDiv div {
+        margin-top: 0;
+    }
+
+        #learnDiv div:first-child div {
+            margin-top: 5%;
+        }
+}
+
+#learnDiv div figure {
+    margin-left: 5%;
+}
+
+/*timeline*/
+
+.timelineContainer {
+    margin-right: -45px;
+}
+
+
+.timeline li {
+    list-style: none;
+    float: left;
+    width: 33.3333%;
+    position: relative;
+    text-align: center;
+}
+
+
+    .timeline li:before {
+        counter-increment: test;
+        content: "";
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: block;
+        margin: 0 auto 10px auto;
+        /*background: #fff;*/
+        cursor: pointer;
+    }
+
+.timelineCircle:before {
+    background-color: white !important;
+}
+
+.timelineCircle_a:before {
+    background-color: #F05E29 !important;
+}
+
+.timeline li:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    top: 15px;
+    left: -50%;
+    z-index: -999;
+    transition: all ease-in-out .3s;
+}
+
+.timeline li:first-child:after {
+    content: none;
+}
+
+.timelineLiContent {
+    width: auto;
+    margin: 0 auto;
+}
+
+.timelineContainer {
+    width: auto;
+}
+
+/*מגודל 576 ומעלה*/
+@media (min-width: 576px) {
+    .timelineContainer {
+        width: 80%;
+    }
+
+    .timelineLiContent {
+        width: 75%;
+        margin: 0 auto;
+        font-size: 1.5rem;
+        padding-bottom: 120px;
+    }
+}
+
+/*learn animation*/
+#learnDiv div div div p {
+    opacity: 0;
+    animation: fadeIn;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+.timelineContainer {
+    transform: translateX(2000px);
+    animation: backInRight;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+/*ADJUST PAGE*/
+#adjustOutput {
+    border: 3px solid #92D050;
+    background-color: #222327;
+    width: 300px;
+    height: 50px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+}
+
+#adjustDiv div:first-child {
+    margin-top: 30%;
+}
+
+
+#adjustDiv div:last-child {
+    margin-left: 0%;
+}
+
+#adjustDiv div:first-child p {
+    margin-left: 2%;
+}
+
+    #adjustDiv div:first-child p:nth-child(3) b {
+        font-size: 1.3rem;
+    }
+
+/*מגודל 576 ומעלה*/
+@media (min-width: 576px) {
+
+    #adjustDiv div:first-child {
+        margin-top: -5%;
+    }
+
+        #adjustDiv div:first-child p {
+            margin-left: 0%;
+        }
+
+    #adjustDiv div:last-child {
+        margin-left: 10%;
+    }
+
+    #adjustDiv div:first-child p:nth-child(3) b {
+        font-size: 2rem;
+    }
+}
+
+#adjustDiv div p {
+    margin-right: 5%;
+}
+
+#adjustDiv div ul {
+    list-style: none;
+    padding: 0 !important;
+}
+
+    #adjustDiv div ul div {
+        margin: 0 !important;
+        width: 100%;
+    }
+
+.clickbleNunbers {
+    font-size: 2rem;
+    border: 3px solid white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.clickbleNunbers_a {
+    background-color: #F05E29;
+}
+
+/*adjust animation*/
+#adjustDiv div p {
+    opacity: 0;
+    animation: fadeIn;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+
+
+/*EXPLANATION PAGE*/
+#explanationDiv ul {
+    list-style: none;
+}
+
+#explanationZooma {
+    display: block;
+    margin: 0 auto;
+}
+
+#explanationZooma {
+    width: 50%;
+}
+
+#explanationDiv div {
+    margin-top: 30%;
+}
+
+    #explanationDiv div ul li {
+        margin-bottom: 2%;
+        font-size: larger;
+    }
+
+    #explanationDiv div ul {
+        padding-left: 40px;
+    }
+
+    #explanationDiv div ul {
+        padding-top: 3%;
+    }
+
+/*מגודל 576 ומעלה*/
+@media (min-width: 576px) {
+
+    #explanationZooma {
+        width: 40%;
+    }
+
+    #explanationDiv div {
+        margin-top: 0;
+    }
+
+        #explanationDiv div ul {
+            font-size: 1.3rem;
+            padding-top: 3%;
+        }
+}
+
+/*explanation animation*/
+#explanationDiv div ul li:first-child {
+    opacity: 0;
+    animation: fadeIn;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+#explanationDiv div ul li:nth-child(2) {
+    opacity: 0;
+    animation: fadeIn;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+#explanationDiv div ul li:nth-child(3) {
+    opacity: 0;
+    animation: fadeIn;
+    animation-duration: 2s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+#explanationDiv div ul li:nth-child(4) {
+    opacity: 0;
+    animation: fadeIn;
+    animation-duration: 2s;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+}
+
+#explanationDiv div ul li:last-child {
+    opacity: 0;
+    animation: fadeIn;
+    animation-duration: 2s;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+}
+
+#explanationZooma {
+    animation: bounce;
+    animation-duration: 1s;
+    animation-delay: 5.2s;
+    animation-fill-mode: forwards;
+}
+
+/*PEOPLE PAGE*/
+.maayanYuvalImg {
+    width: 95%
+}
+
+#maayanYuvalImgWrap {
+    margin: 0;
+    width: 100%;
+}
+
+.wrapPeopleContant {
+    margin-top: 20%;
+}
+
+    .wrapPeopleContant p {
+        margin-right: 5%;
+    }
+
+/*people animation*/
+#peopleDiv div:first-child p {
+    opacity: 0;
+    animation: fadeIn;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+#peopleDiv div:last-child {
+    opacity: 0;
+    animation: fadeIn;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+/*מגודל 576 ומעלה*/
+@media (min-width: 576px) {
+
+    .wrapPeopleContant {
+        margin-top: -10%;
+    }
+
+    #peopleDiv div:first-child p {
+        opacity: 0;
+        animation: fadeIn;
+        animation-duration: 2s;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+    }
+
+    #peopleDiv div:last-child {
+        opacity: 0;
+        animation: fadeIn;
+        animation-duration: 2s;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+    }
+
+        #peopleDiv div:last-child p b {
+            font-size: 1.5rem;
+        }
+}
